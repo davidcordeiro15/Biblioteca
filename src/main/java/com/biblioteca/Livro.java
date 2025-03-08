@@ -1,4 +1,4 @@
-package src.main.java.com.biblioteca;
+package com.biblioteca;
 
 public class Livro {
     private String isbn;

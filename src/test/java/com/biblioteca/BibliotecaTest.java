@@ -1,11 +1,11 @@
-package src.test.java.com.biblioteca;
+package com.biblioteca;
 
 
 import org.junit.jupiter.api.*;
-import static org.mockito.Mockito.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-import src.main.java.com.biblioteca.*;
+import com.biblioteca.*;
 
 import java.util.*;
 
@@ -45,9 +45,20 @@ public class BibliotecaTest {
     public void testRegistrarEmprestimo() {
         biblioteca.adicionarLivro(livro);
         biblioteca.registrarMembro(membro);
-        Emprestimo emprestimo = new Emprestimo(livro, membro, new Date());
+        
+        Emprestimo emprestimoEsperado = new Emprestimo(livro, membro, new Date());
         biblioteca.registrarEmprestimo(livro, membro);
-        assertTrue(biblioteca.getEmprestimos().contains(emprestimo), "Empréstimo não foi registrado corretamente.");
+
+        boolean emprestimoRegistrado = false;
+        for (Emprestimo emprestimo : biblioteca.getEmprestimos()) {
+            if (emprestimo.getLivro().equals(emprestimoEsperado.getLivro()) &&
+                emprestimo.getMembro().equals(emprestimoEsperado.getMembro())) {
+                emprestimoRegistrado = true;
+                break;
+            }
+        }
+
+        assertTrue(emprestimoRegistrado, "Empréstimo não foi registrado corretamente.");
     }
 
     @Test

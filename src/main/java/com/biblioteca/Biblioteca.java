@@ -1,4 +1,4 @@
-package src.main.java.com.biblioteca;
+package com.biblioteca;
 import java.io.*;
 import java.util.*;
 
