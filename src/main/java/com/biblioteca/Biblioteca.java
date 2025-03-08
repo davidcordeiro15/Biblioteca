@@ -1,3 +1,4 @@
+package src.main.java.com.biblioteca;
 import java.io.*;
 import java.util.*;
 
@@ -65,5 +66,23 @@ public class Biblioteca {
                 System.out.println(linha);
             }
         }
+    }
+    public Livro buscarLivroPorIsbn(String isbn) {
+        for (Livro livro : livros) {
+            if (livro.getIsbn().equals(isbn)) {
+                return livro;
+            }
+        }
+        return null;
+    }
+
+    
+    public Membro buscarMembroPorId(int id) {
+        for (Membro membro : membros) {
+            if (membro.getId() == id) {
+                return membro;
+            }
+        }
+        return null;
     }
 }

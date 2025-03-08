@@ -1,5 +1,0 @@
-Livro:Livro{titulo='Livro A', autor='Autor A', ISBN='12345'}
-Livro:Livro{titulo='Livro B', autor='Autor B', ISBN='67890'}
-Membro:Membro{nome='Membro A', id=1, email='emailA@fiap.com.br'}
-Membro:Membro{nome='Membro B', id=2, email='emailB@fiap.com.br'}
-Emprestimo:Emprestimo{livro=Livro{titulo='Livro A', autor='Autor A', ISBN='12345'}, membro=Membro{nome='Membro A', id=1, email='emailA@fiap.com.br'}, dataEmprestimo=Thu Mar 06 19:12:10 BRT 2025}
